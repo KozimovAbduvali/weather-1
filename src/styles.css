@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth
+  }
+
+  body {
+    @apply bg-[#E3F2Fd] font-roboto capitalize overflow-x-hidden
+  }
+}
+
+.separator::before {
+  content: "or";
+  @apply text-sm md:text-lg bg-[#E3F2Fd] px-5
+}
