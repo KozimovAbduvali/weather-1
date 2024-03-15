@@ -74,9 +74,9 @@ const getCityCoordinates = () => {
       const { name, lat, lon } = data[0];
       getWeatherDetails(name, lat, lon);
     })
-    .catch(() => {
-      alert("nothing found");
-    });
+    // .catch(() => {
+    //   alert("nothing found");
+    // });
 };
 
 const getUserCoordinates = () => {
@@ -92,9 +92,9 @@ const getUserCoordinates = () => {
           const { name, lat, lon } = data[0];
           getWeatherDetails(name, lat, lon);
         })
-        .catch(() => {
-          alert("nothing found city");
-        });
+        // .catch(() => {
+        //   alert("nothing found city");
+        // });
     },
     error => {
       if (error.PERMISSION_DENIED) {
