@@ -15,13 +15,13 @@ const createWeatherCard = (cityName, weatherItem, index) => {
               <p class="text-sm md:text-base mt-1">Humidity: ${weatherItem.main.humidity}%</p>
             </div>
             <div class="icon">
-              <img class="h-28 md:h-48" src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather-icon">
+              <img class="h-28 md:h-48 mt-2" src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather-icon">
               <h4 class="text-xl text-center font-medium mt-2">${weatherItem.weather[0].description}</h4>
             </div>`;
   } else {
     return `<div class="card bg-green-500 text-white rounded-md shadow-lg p-4">
                 <h4>(${weatherItem.dt_txt.split(" ")[0]})</h4>
-                <img class="shadow-md h-24" src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="weather-icon">
+                <img class="shadow-md h-24 mt-3" src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="weather-icon">
                 <p class="text-sm md:text-base mt-3">temp: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</p>
                 <p class="text-sm md:text-base mt-1">wind: ${weatherItem.wind.speed}M/S</p>
                 <p class="text-sm md:text-base mt-1">Humidity: ${weatherItem.main.humidity}%</p>
