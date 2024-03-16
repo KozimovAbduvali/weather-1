@@ -16,3 +16,12 @@
   content: "or";
   @apply text-sm md:text-lg bg-[#E3F2Fd] px-5
 }
+
+
+.select-btn {
+  @apply bg-white rounded-md shadow-md py-2.5 px-5
+}
+
+.select-btn.active {
+  @apply bg-blue-700 text-white transition duration-300
+}
