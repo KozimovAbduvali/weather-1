@@ -89,8 +89,8 @@ const getUserCoordinates = () => {
         .then(res => res.json())
         .then(data => {
           if (!data.length) return alert(`NO coordinates found for ${cityName}`);
-          const { name, lat, lon } = data[0];
-          getWeatherDetails(name, lat, lon);
+          const { name } = data[0];
+          getWeatherDetails(name, latitude, longitude);
         })
         .catch(() => {
           alert("nothing found city");
