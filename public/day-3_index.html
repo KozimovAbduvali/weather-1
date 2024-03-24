@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <title>20 proects</title>
+</head>
+
+<body>
+  <header class="w-full bg-gray-100 shadow-md p-5">
+    <nav class="flex items-center justify-center gap-10">
+      <div class=" ">
+        <h1 class="font-semibold text-xl md:text-3xl text-center">
+          20 porects
+        </h1>
+      </div>
+      <a href="#" class="font-semibold text-xl text-center">github-code</a>
+    </nav>
+  </header>
+  <div class="linksGrid max-w-3xl space-y-10 mx-auto p-5 mt-5">
+    <!--  -->
+  </div>
+  <script>
+    const linkCards = [
+      {
+        title: 'html',
+        width: 60,
+      },
+      {
+        title: 'css & scss',
+        width: 55,
+      },
+      {
+        title: 'bootstrap',
+        width: 80,
+      },
+      {
+        title: 'tailwind css',
+        width: 75,
+      },
+      {
+        title: 'javascrpt',
+        width: 30,
+      },
+      {
+        title: 'react',
+        width: 30,
+      },
+    ];
+
+    function cadrAdd({ title, width }) {
+      let text;
+      let colorClass;
+      if (parseInt(width) >= 65) {
+        text = 'Advanced';
+      } else if (parseInt(width) >= 50) {
+        text = 'Intermediate';
+      } else {
+        text = 'Beginner';
+      }
+
+      return `
+      <div>
+        <div class="text-center flex justify-between w-full md:text-xl font-medium py-2">
+          <p class="capitalize">${title}</p>
+          <p>${text}</p>
+          </div>
+        <div class="h-2 md:h-4 w-full bg-gray-500 rounded-full">  
+          <div class="h-full bg-[#13ADC7] ${colorClass} w-[${width}%] bg-black rounded-full"></div>
+        </div>
+      </div>`;
+    };
+
+    function toBind() {
+      const container = document.querySelector('.linksGrid');
+      linkCards.forEach(card => {
+        const cardHTML = cadrAdd(card);
+        container.innerHTML += cardHTML;
+      });
+    };
+
+    toBind();
+  </script>
+</body>
+
+</html>
