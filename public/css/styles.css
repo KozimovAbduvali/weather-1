@@ -614,11 +614,17 @@ video {
 .h-full {
   height: 100%;
 }
+.h-60 {
+  height: 15rem;
+}
 .w-\[120\%\] {
   width: 120%;
 }
 .w-full {
   width: 100%;
+}
+.w-60 {
+  width: 15rem;
 }
 .max-w-4xl {
   max-width: 56rem;
