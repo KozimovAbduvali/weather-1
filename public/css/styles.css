@@ -559,6 +559,10 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
 .-mt-4 {
   margin-top: -1rem;
 }
@@ -595,9 +599,6 @@ video {
 .hidden {
   display: none;
 }
-.h-2 {
-  height: 0.5rem;
-}
 .h-24 {
   height: 6rem;
 }
@@ -619,14 +620,14 @@ video {
 .w-full {
   width: 100%;
 }
-.max-w-3xl {
-  max-width: 48rem;
-}
 .max-w-4xl {
   max-width: 56rem;
 }
 .max-w-7xl {
   max-width: 80rem;
+}
+.max-w-96 {
+  max-width: 24rem;
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -658,11 +659,6 @@ video {
 .gap-8 {
   gap: 2rem;
 }
-.space-y-10 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
-}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -671,9 +667,6 @@ video {
 }
 .whitespace-nowrap {
   white-space: nowrap;
-}
-.rounded-full {
-  border-radius: 9999px;
 }
 .rounded-lg {
   border-radius: 0.5rem;
@@ -688,17 +681,9 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(34 197 94 / var(--tw-border-opacity));
 }
-.bg-\[\#13ADC7\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 173 199 / var(--tw-bg-opacity));
-}
 .bg-\[\#5372F0\] {
   --tw-bg-opacity: 1;
   background-color: rgb(83 114 240 / var(--tw-bg-opacity));
-}
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-black\/80 {
   background-color: rgb(0 0 0 / 0.8);
@@ -710,10 +695,6 @@ video {
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 .bg-green-500 {
   --tw-bg-opacity: 1;
@@ -785,9 +766,6 @@ video {
 }
 .lowercase {
   text-transform: lowercase;
-}
-.capitalize {
-  text-transform: capitalize;
 }
 .text-orange-500 {
   --tw-text-opacity: 1;
@@ -872,6 +850,19 @@ video {
   transition-duration: 300ms;
 }
 
+.progress-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  z-index: -10;
+  height: 0.25rem;
+  width: 100%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity))}
+
 .placeholder\:capitalize::-moz-placeholder {
   text-transform: capitalize;
 }
@@ -926,10 +917,6 @@ video {
 
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
-  }
-
-  .md\:h-4 {
-    height: 1rem;
   }
 
   .md\:h-48 {

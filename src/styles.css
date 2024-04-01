@@ -25,3 +25,8 @@
 .select-btn.active {
   @apply bg-blue-700 text-white transition duration-300
 }
+
+.progress-container::before {
+  content: '';
+  @apply bg-red-400 w-full h-1 absolute top-1/2 left-0 -z-10 -translate-y-1/2
+}
